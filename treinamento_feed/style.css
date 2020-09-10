@@ -9,27 +9,30 @@ html{
 }
 
 body {
+    width:100vw;
     background-color:#E5E5E5;
     font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
+    overflow: hidden;
 }
 
 div.wrapper {
     display: grid;
     grid-template-areas: "menu timeline widgets";
     grid-template-columns: 20vw auto 30vw;    
+    width: 100vw;
 }
 
-input, textarea, button{
+input, span, button{
     outline: 0;
 }
 
 /*Configurações menu*/
 
 div.wrapper div.menu{
-    /* grid-area: menu; */
-    flex:1;
+    grid-area: menu;
+    flex:1; 
     background-color: #fff;
     box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.25);
     padding: 18px 15px 0px 30px;
@@ -171,7 +174,7 @@ div.wrapper .timeline form.inpiu div.enter textarea{
     color:black;
 }
 
-/* #span{
+#textareaAutogrow{
     border:none;
     font-size:2.0rem;
     margin-top: 15px;
@@ -180,7 +183,7 @@ div.wrapper .timeline form.inpiu div.enter textarea{
     overflow:auto;
     font-family:inherit;
     color:black;
-} */
+}
 
 
 div.wrapper .timeline form.inpiu div.enter textarea.disabled{
@@ -194,7 +197,7 @@ div.wrapper .timeline form.inpiu div.enter p#counter{
     font-size:1.2rem;
 }
 
-div.wrapper .timeline form.inpiu div.enter textarea::-webkit-scrollbar{
+div.wrapper .timeline form.inpiu div.enter #textareaAutogrow::-webkit-scrollbar{
     display:none;
 }
 
@@ -310,6 +313,12 @@ div.wrapper .timeline div.piu div.info div.user-info p{
 div.wrapper .timeline div.piu div.info div.text{
     font-size:1.7rem;
     flex-wrap: wrap;
+}
+
+.novaclasse{
+    word-break: break-all;
+    max-width: 100%;
+    font-size:1.8rem;
 }
 
 div.wrapper .timeline div.piu div.info div.react{

@@ -7,7 +7,7 @@ var vazio = document.querySelector('#vazio');
 
 //configura contador de caracteres
 novoPiu.addEventListener('input', function(){
-    var caracteres = this.value.length;
+    var caracteres = this.textContent.length;
     counter.textContent = caracteres + '/140';
 
     if (caracteres > 140) {
@@ -41,15 +41,16 @@ novoPiu.addEventListener('input', function(){
 })
 
 //ajusta altura da caixa de texto depois que o piu é enviado
-buttonPiu.addEventListener('click', function(){
-    novoPiu.rows = 0;
-});
+// buttonPiu.addEventListener('click', function(){
+//     novoPiu.rows = 0;
+// });
 
 //posta piu na timeline
 buttonPiu.addEventListener('click', function(event){
     event.preventDefault();
     var form = document.querySelector('.inpiu');
-    var piuContent = form.novopiu.value.replace(/\n/g, '<br>');
+    // var piuContent = form.novopiu.value.replace(/\n/g, '<br>');
+    var piuContent = form.querySelector('#textareaAutogrow').textContent;
 
 
     if (!piuContent == ''){
@@ -76,9 +77,9 @@ buttonPiu.addEventListener('click', function(event){
         var user = document.createElement('p');
         user.textContent = '@glaucius_dohrnii';
     
-        var divText = document.createElement('div');
+        var divText = document.createElement('p');
         divText.innerHTML = piuContent;     
-        divText.classList.add('text');
+        divText.classList.add('novaclasse');
     
         divUser.appendChild(nome);
         divUser.appendChild(user);
@@ -121,7 +122,8 @@ buttonPiu.addEventListener('click', function(event){
         lastPiu = document.querySelector('.piu')
         timeline.insertBefore(piu, lastPiu);
     
-        form.reset();
+        // form.reset();
+        form.querySelector('#textareaAutogrow').textContent = '';
     } else {
         vazio.classList.remove('none');
         setTimeout(function(){
