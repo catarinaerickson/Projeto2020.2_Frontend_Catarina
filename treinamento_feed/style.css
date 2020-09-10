@@ -163,16 +163,7 @@ div.wrapper .timeline form.inpiu div.enter{
     margin-left: 10px;
 }
 
-div.wrapper .timeline form.inpiu div.enter textarea{
-    border:none;
-    font-size:2.0rem;
-    margin-top: 15px;
-    width: 100%;
-    resize:none;
-    overflow:auto;
-    font-family:inherit;
-    color:black;
-}
+
 
 #textareaAutogrow{
     border:none;
@@ -185,8 +176,12 @@ div.wrapper .timeline form.inpiu div.enter textarea{
     color:black;
 }
 
+#textareaAutogrow[contenteditable]:empty::before{
+    content: 'Dá um Piu!';
+    color:#787878;
+}
 
-div.wrapper .timeline form.inpiu div.enter textarea.disabled{
+div.wrapper .timeline form.inpiu div.enter #textareaAutogrow.disabled{
     color: red;
 }
 
