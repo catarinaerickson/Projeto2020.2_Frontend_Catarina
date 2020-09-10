@@ -33,19 +33,23 @@ novoPiu.addEventListener('input', function(){
     
 });
 
-
-
+novoPiu.addEventListener('input', function(){
+    if (this.scrollHeight > this.offsetHeight){
+        this.rows += 1;
+        console.log('ok');
+    };
+})
 
 //ajusta altura da caixa de texto depois que o piu é enviado
-/*buttonPiu.addEventListener('click', function(){
+buttonPiu.addEventListener('click', function(){
     novoPiu.rows = 0;
-});*/
+});
 
 //posta piu na timeline
 buttonPiu.addEventListener('click', function(event){
     event.preventDefault();
-    var form = document.querySelector('#textareaAutogrow');
-    var piuContent = form.value.replace(/\n/g, '<br>');
+    var form = document.querySelector('.inpiu');
+    var piuContent = form.novopiu.value.replace(/\n/g, '<br>');
 
 
     if (!piuContent == ''){
@@ -128,7 +132,7 @@ buttonPiu.addEventListener('click', function(event){
             vazio.classList.remove('fadeOutInpiu');
         }, 3000);
     }
-
+    
     counter.textContent = '';
 } );
 

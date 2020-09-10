@@ -28,7 +28,8 @@ input, textarea, button{
 /*Configurações menu*/
 
 div.wrapper div.menu{
-    grid-area: menu;
+    /* grid-area: menu; */
+    flex:1;
     background-color: #fff;
     box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.25);
     padding: 18px 15px 0px 30px;
@@ -168,7 +169,6 @@ div.wrapper .timeline form.inpiu div.enter textarea{
     overflow:auto;
     font-family:inherit;
     color:black;
-    height:30px;
 }
 
 /* #span{
@@ -292,7 +292,7 @@ div.wrapper .timeline div.piu div.info{
 
 div.wrapper .timeline div.piu div.info > div{
     display:flex;
-    flex:1;
+    flex:1; 
     margin-bottom:10px;
     align-items: center;
 }
@@ -309,7 +309,7 @@ div.wrapper .timeline div.piu div.info div.user-info p{
 
 div.wrapper .timeline div.piu div.info div.text{
     font-size:1.7rem;
-    word-wrap: break-word;
+    flex-wrap: wrap;
 }
 
 div.wrapper .timeline div.piu div.info div.react{
