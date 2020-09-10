@@ -33,9 +33,9 @@ xhr.onload = () => {
         var user = document.createElement('p');
         user.textContent = obj.username;
 
-        var divText = document.createElement('div');
-        divText.textContent = obj.mensagem;     
-        divText.classList.add('text');
+        var divText = document.createElement('p');
+        divText.innerHTML = obj.mensagem;     
+        divText.classList.add('novaclasse');
 
         divUser.appendChild(nome);
         divUser.appendChild(user);

@@ -3,7 +3,6 @@ var widgets = document.querySelectorAll('.widget');
 var divWidgets = document.querySelector('.widgets');
 
 xhr.addEventListener('load', function() {
-    console.log(xhr.response);
     var arr = xhr.response;
 
     var novoWidget = document.createElement('div');

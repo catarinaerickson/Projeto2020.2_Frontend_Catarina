@@ -40,17 +40,11 @@ novoPiu.addEventListener('input', function(){
     };
 })
 
-//ajusta altura da caixa de texto depois que o piu é enviado
-// buttonPiu.addEventListener('click', function(){
-//     novoPiu.rows = 0;
-// });
-
 //posta piu na timeline
 buttonPiu.addEventListener('click', function(event){
     event.preventDefault();
     var form = document.querySelector('.inpiu');
-    // var piuContent = form.novopiu.value.replace(/\n/g, '<br>');
-    var piuContent = form.querySelector('#textareaAutogrow').textContent;
+    var piuContent = form.querySelector('#textareaAutogrow').textContent.replace(/\n/g, '<br>');
 
 
     if (!piuContent == ''){
